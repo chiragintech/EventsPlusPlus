@@ -1,0 +1,46 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.image1{
+    height: 450px;
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)), url("../../images/calendar.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#heading, #para{
+    color: white;
+    text-align: center;
+    font-style: oblique;
+}
+
+
+#heading{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+#para{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#event{
+    margin: 50px 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#popular{
+    margin-top: 70px;
+    margin-left: 150px;
+    font-size: 60px;
+    font-weight: 100;
+}

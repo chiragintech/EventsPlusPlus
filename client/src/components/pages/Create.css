@@ -1,0 +1,17 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#create-head h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+#create-card{
+    margin: 10% 15%;
+}
+
+input{
+    height: 50px;
+}
