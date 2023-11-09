@@ -1,3 +1,1 @@
-# EventPlusPlus
-# EventPlusPlus
-# trial
+Web tech mini project
