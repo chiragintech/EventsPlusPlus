@@ -4,18 +4,20 @@ import './Home.css';
 import event1 from '../../images/events1.jpg';
 import event2 from '../../images/events2.jpg';
 import event3 from '../../images/events3.jpg';
-
+import Footer from "./Footer.js";
 
 export function Home() {
     return (
         <div>
             <NavBar />
-            <div className="image1">
-                <h1 id="heading">Plan Your Perfect Event With Event++</h1>
-                <p id="para">It's all in the details</p>
+
+            <div className="banner">
+                <h1 id="banner_desc">Plan Your Perfect Event With Event++</h1>
+                <p id="banner_span">It's all in the details</p>
             </div>
-            <h1 id="popular">Popular</h1>
-            <div id="event">
+
+            <h1 id="desc_header1">Popular Events</h1>
+            <div className="event">
                 <Events
                     img={event1}
                     where="Bengaluru Startup Meet"
@@ -52,6 +54,7 @@ export function Home() {
                     price="Free"
                 />
             </div>
+            <Footer />
         </div>
     );
 }
