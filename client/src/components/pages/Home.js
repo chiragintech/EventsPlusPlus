@@ -1,61 +1,50 @@
-import NavBar from "../NavBar.js";
 import Events from "../Events.js";
-import './Home.css';
-import event1 from '../../images/events1.jpg';
-import event2 from '../../images/events2.jpg';
-import event3 from '../../images/events3.jpg';
-import Footer from "./Footer.js";
+import "./Create.css";
+import "./Home.css";
+import NavBar from "../NavBar.js";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
-export function Home() {
+function Home() {
+    let [events, setEvents] = useState([]);
+
+    useEffect(() => {
+        axios
+        .get("http://localhost:3010/get")
+        .then((result) => {
+            let resData = result.data.reverse();
+            setEvents(resData);
+            console.log(result.data);
+        })
+        .catch((err) => {
+            console.log(err);
+            console.log(events);
+        });
+    }, [events]);
     return (
         <div>
             <NavBar />
-
             <div className="banner">
                 <h1 id="banner_desc">Plan Your Perfect Event With Event++</h1>
                 <p id="banner_span">It's all in the details</p>
             </div>
-
-            <h1 id="desc_header1">Popular Events</h1>
-            <div className="event">
-                <Events
-                    img={event1}
-                    where="Bengaluru Startup Meet"
-                    when="Friday 6:30 PM"
-                    about="Draper Startup House for Entrepreneurs"
-                    price="Free"
-                />
-                <Events
-                    img={event3}
-                    where="Lego Mechatronics : Innovators Program"
-                    when="Saturday • 6:30 PM"
-                    about="Accolades Badminton & Sports"
-                    price="Free"
-                />
-                <Events
-                    img={event2}
-                    where="The Science of Tantra and Sexuality"
-                    when="Saturday • 6:30 PM GMT+5:30"
-                    about=""
-                    price="Free"
-                />
-                <Events
-                    img={event3}
-                    where="Lego Mechatronics : Innovators Program"
-                    when="Saturday • 6:30 PM"
-                    about="Accolades Badminton & Sports"
-                    price="Free"
-                />
-                <Events
-                    img={event1}
-                    where="Bengaluru Startup Meet"
-                    when="Friday 6:30 PM"
-                    about="Draper Startup House for Entrepreneurs"
-                    price="Free"
-                />
+            <h1 id="desc_header1">Popular</h1>
+            <div id="event">
+                {events.map((event, i) => (
+                    <Events
+                        name = {event.task.eventName}
+                        img={event.task.eventImgURL}
+                        address={event.task.eventAddress}
+                        date={event.task.eventDate}
+                        about={event.task.eventAbout}
+                        price={event.task.eventPrice}
+                        key = {i}
+                    />
+                ))}
             </div>
-            <Footer />
+            <hr />
         </div>
     );
 }
 
+export default Home;
