@@ -1,47 +1,80 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.create{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,.8)), url('../../images/events3.jpg');
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.create-h1{
+    text-align: center;
+    margin-top: 150px;
+    color: white;
+}
 
 .create-sec{
     display: flex;
-    justify-content: flex-end;
-    width: 90%;
-    height: 90%;
-    padding-bottom: 3%;
+    flex-direction: row;
+    width: 100%;
+    height: 40vh;
+    justify-content: center;
+    /* align-items: center; */
 }
 
-.create-card{
+.create-card1{
     display: flex;
     flex-direction: column;
-    width: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    color: black;
+    height: 300px;
+    justify-content: flex-start;
+    margin: 15px;
 }
 
-input, label{
+.create-card2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 300px;
+    margin: 15px;
+}
+
+#btn{
+    background-color: white;
     display: block;
-}
-
-input{
-    margin-bottom: 2%;
-    margin-top: 1%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    height: 5vh;
-}
-
-label{
-    margin-top: 3%;
-    margin-bottom: 0;
-    margin-left: 14%;
-}
-
-h2{
-    margin: 2%;
-    margin-left: 7%;
-}
-
-button{
-    width: 20%;
+    margin: auto;
     height: 50px;
-    margin: 2%;
-    margin-left: 14%;
+    padding: 0px 30px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: medium;
 }
+
+#btn:hover{
+    background-color: #f1f1f1;
+}
+
+.create-inp{
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+    width: 25vw;
+    height: 25px;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 15px;
+    padding-left: 14px;
+}
+::-webkit-input-placeholder {
+       color: white;
+    }
+    :-moz-placeholder { /* Upto Firefox 18, Deprecated in Firefox 19  */
+       color: white;  
+    }
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: white;  
+    }
+    :-ms-input-placeholder {  
+       color: white;  
+    }

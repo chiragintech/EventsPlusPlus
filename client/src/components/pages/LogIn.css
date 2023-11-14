@@ -1,67 +1,69 @@
 .login{
-    background: url(./../../images/event.webp) no-repeat content-box center center fixed;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.7)),url(./../../images/event.webp);
     background-size: cover;
-    background-position: top;
     height: 100vh;
+    overflow: hidden;
     display: flex;
-    background-position-y: -40px; 
+    justify-content: center;
 }
 
-form {
-    max-width: 500px;
-    padding: 10px;
-    margin: 170px 0px 20px 500px;
-    align-items: center;
-    background-color: rgba(0,0,0,.75);
-    border-radius: 4px;
-    box-sizing: border-box;
+.login-welcome{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    margin: 30px;
 }
 
-#login_head {
+.login-welcome h1{
+    font-size: 5vw;
+    color: white;
+    /* margin-top: -30px; */
+}
+
+.login-welcome p{
+    color: white;
+    margin: 50px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.login-forms{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#login_head{
+    color: white;
     text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    color: white;
-
-}
-input {
-    width: 70%;
-    height: 40px;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-    font-size: 17px;
-}
-label {
-    font-size: 20px;
-    font-weight: bold;
-    align-self: self-start;
-    color: white;
-}
-#login_button {
-    width: 70%;
-    height: 40px;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-    font-size: 17px;
-    background-color: red;
-    color: white;
-}
-#signup_link {
-    color: purple;
-    font-size: 15px;
-    margin-top: -20px;
-    text-decoration: underline;
-    text-align: center;
-    font-weight: bold;
 }
 
+
+.login-inp{
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    height: 20px;
+    width: 25vw;
+    background-color: rgba(255,255,255,.3);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#login_button{
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    width: 25vw;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: medium;
+}
+
+#signup_link{
+    margin-left: 20px;
+}

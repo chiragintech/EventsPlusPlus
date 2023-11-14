@@ -1,7 +1,7 @@
 import Events from "../Events.js";
-import "./Create.css";
 import "./Home.css";
 import NavBar from "../NavBar.js";
+import Footer from '../pages/Footer.js'
 import {useEffect, useState} from "react";
 import axios from "axios";
 
@@ -29,7 +29,7 @@ function Home() {
                 <p id="banner_span">It's all in the details</p>
             </div>
             <h1 id="desc_header1">Popular</h1>
-            <div id="event">
+            <div className="event">
                 {events.map((event, i) => (
                     <Events
                         name = {event.task.eventName}
@@ -42,7 +42,7 @@ function Home() {
                     />
                 ))}
             </div>
-            <hr />
+            <Footer/>
         </div>
     );
 }
