@@ -1,4 +1,5 @@
 import "./Create.css";
+import NavBar from '../NavBar.js'
 import React, {useState} from "react";
 import axios from "axios";
 
@@ -29,35 +30,87 @@ function Create() {
     };
 
     return (
-        <div className="create-sec">
-            <div className="create-img"></div>
-            <div className="create-card">
-                <label htmlFor="" color="black">Event Name</label>
-                <input type="text" value={task.eventName} name="eventName" onChange={handleChange} />
+        <div className="create">
+            <NavBar />
+            <h1 className="create-h1">Create a new event</h1>
+            <div className="create-sec">
+                <div className="create-card1">
+                    {/* <label htmlFor="">Event Name</label> */}
+                    <input
+                        className="create-inp"
+                        type="text"
+                        value={task.eventName}
+                        name="eventName"
+                        onChange={handleChange}
+                        placeholder="Event Name"
+                    />
 
-                <label htmlFor="">Link/URL</label>
-                <input type="url" name="eventLink" value={task.eventLink} onChange={handleChange} />
+                    {/* <label htmlFor="">Link/URL</label> */}
+                    <input
+                        className="create-inp"
+                        type="url"
+                        name="eventLink"
+                        value={task.eventLink}
+                        onChange={handleChange}
+                        placeholder="Link/URL"
+                    />
 
-                <label htmlFor="">Image URL</label>
-                <input type="url" name="eventImgURL" value={task.eventImgURL} onChange={handleChange} />
+                    {/* <label htmlFor="">Image URL</label> */}
+                    <input
+                        className="create-inp"
+                        type="url"
+                        name="eventImgURL"
+                        value={task.eventImgURL}
+                        onChange={handleChange}
+                        placeholder="Image URL"
+                    />
+                    {/* <label htmlFor="">Date</label> */}
+                    <input
+                        className="create-inp"
+                        type="text"
+                        name="eventDate"
+                        value={task.eventDate}
+                        onChange={handleChange}
+                        placeholder="Date"
+                    />
+                </div>
+                <div className="create-card2">
+                    {/* <h2>Location</h2> */}
 
-                <label htmlFor="">Date</label>
-                <input type="text" name="eventDate" value={task.eventDate} onChange={handleChange} />
-                <h2>Location</h2>
+                    {/* <label htmlFor="">About</label> */}
+                    <input
+                        className="create-inp"
+                        type="text"
+                        name="eventAbout"
+                        value={task.eventAbout}
+                        onChange={handleChange}
+                        placeholder="About"
+                    />
 
-                <label htmlFor="">About</label>
-                <input type="text" name="eventAbout" value={task.eventAbout} onChange={handleChange} />
+                    {/* <label htmlFor="">Location Adress</label> */}
+                    <input
+                        className="create-inp"
+                        type="text"
+                        name="eventAddress"
+                        value={task.eventAddress}
+                        onChange={handleChange}
+                        placeholder="Location"
+                    />
 
-                <label htmlFor="">Location Adress</label>
-                <input type="text" name="eventAddress" value={task.eventAddress} onChange={handleChange} />
-
-                <label htmlFor="">Price</label>
-                <input type="text" name="eventPrice" value={task.eventPrice} onChange={handleChange} />
-
-                <button type="button" onClick={handleAdd}>
-                    Create New Event
-                </button>
+                    {/* <label htmlFor="">Price</label> */}
+                    <input
+                        className="create-inp"
+                        type="text"
+                        name="eventPrice"
+                        value={task.eventPrice}
+                        onChange={handleChange}
+                        placeholder="Price"
+                    />
+                </div>
             </div>
+            <button type="reset" onClick={handleAdd} id="btn">
+                Create New Event
+            </button>
         </div>
     );
 }

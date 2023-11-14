@@ -1,27 +1,35 @@
-import React from 'react'
-import './LogIn.css';
+import React from "react";
+import "./LogIn.css";
 import NavBar from "../NavBar.js";
 function LogIn() {
   return (
-    <div className='login'>
-        <div className='login_page'>
-          <NavBar />
-            <form>
-            <h1 id='login_head'>Log In</h1>
-                <label htmlFor="" id='entry_email/no'>Email or Phone number</label>
-                <br />
-                <input type="text" name="" id="entered_email/no" />
-                <br />
-                <label htmlFor="" id='entry_password'>Password</label>
-                <br />
-                <input type="password" name="" id="entered_password" />
-                <br />
-                <input type="submit" value="Log In" id='login_button'/>
-                <a href="/signup" id='signup_link'>If you don't have an account, click here!</a>
-            </form>
+    <>
+      <NavBar />
+      <div className="login">
+        <div className="login-welcome">
+          <h1>Welcome Back</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rem sapiente laborum maxime totam commodi, inventore aspernatur! Excepturi ex eveniet repellat animi porro asperiores, voluptate veniam, quaerat voluptas velit perspiciatis!</p>
         </div>
-    </div>
-  )
+        <div className="login-forms">
+          <form>
+            <h1 id="login_head">Log In</h1>
+            {/* <label htmlFor="" className="login-label">
+              Email or Phone number
+            </label> */}
+            <input type="text" name="" className="login-inp" placeholder="Email"/>
+            {/* <label htmlFor="" className="login-label">
+              Password
+            </label> */}
+            <input type="password" name="" className="login-inp" placeholder="Password"/>
+            <input type="submit" value="Log In" id="login_button" />
+            <a href="/signup" id="signup_link">
+              If you don't have an account, click here!
+            </a>
+          </form>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default LogIn
+export default LogIn;

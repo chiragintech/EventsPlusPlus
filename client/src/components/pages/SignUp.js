@@ -4,63 +4,125 @@ import './Signup.css';
 import NavBar from "../NavBar.js";
 
 function SignUp() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [srn, setSrn] = useState('');
-    const [semester, setSemester] = useState('');
-    const [department, setDepartment] = useState('');
-    const [password, setPassword] = useState('');
+    const [userDetails, setUserDetails] = useState({
+        username: '',
+        email: '',
+        phoneNumber: '',
+        srn: '',
+        semester: '',
+        department: '',
+        password: ''
+    })
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Form submitted:', { name, email, phoneNumber, srn, semester, department, password});
+        // console.log('Form submitted:', { username, email, phoneNumber, srn, semester, department, password});
+        console.log(userDetails);
     };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setUserDetails((prev) => ({
+            ...prev,
+            [name]: value
+        }))
+    }
 
     return (
         <div>
-            <div className='signup'>
-            <NavBar />
-            <form onSubmit={handleSubmit} className='form_signup'>
-            <h1 id='signup_head'>Sign Up</h1>
-                <label>
-                    Name:
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} className='inputs'/>
-                </label>
-                <br />
-                <label>
-                    Email:
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className='inputs'/>
-                </label>
-                <br />
-                <label>
-                    Phone Number:
-                    <input type="tel" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} className='inputs'/>
-                </label>
-                <br />
-                <label>
-                    SRN:
-                    <input type="text" value={srn} onChange={(e) => setSrn(e.target.value)} className='inputs'/>
-                </label>
-                <br />
-                <label>
-                    Semester:
-                    <input type="text" value={semester} onChange={(e) => setSemester(e.target.value)} className='inputs'/>
-                </label>
-                <br />
-                <label>
-                    Department:
-                    <input type="text" value={department} onChange={(e) => setDepartment(e.target.value)} className='inputs' id='dept_tb' />
-                </label>
-                <br />
-                <label>
-                    Password:
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className='inputs'/>
-                </label>
-                <button type="submit" id='signup_button'>Submit</button>
-                <br />
-                <br />
-            </form>
+            <div className="signup">
+                <NavBar />
+                <h1 id="signup_head">Sign Up</h1>
+                <form onSubmit={handleSubmit}>
+                    <div className="form_signup">
+                        <div className="left">
+                            <label>
+                                <input
+                                    className="signup-inp"
+                                    type="text"
+                                    placeholder="UserName"
+                                    value={userDetails.username}
+                                    name="username"
+                                    onChange={handleChange}
+                                />
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    className="signup-inp"
+                                    type="email"
+                                    placeholder="Email"
+                                    value={userDetails.email}
+                                    name="email"
+                                    onChange={handleChange}
+                                />
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    className="signup-inp"
+                                    type="tel"
+                                    placeholder="Phone Number"
+                                    value={userDetails.phoneNumber}
+                                    name="phoneNumber"
+                                    onChange={handleChange}
+                                />
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    className="signup-inp"
+                                    type="text"
+                                    placeholder="SRN"
+                                    value={userDetails.srn}
+                                    name="srn"
+                                    onChange={handleChange}
+                                />
+                            </label>
+                            <br />
+                        </div>
+                        <div className="right">
+                            <label>
+                                <input
+                                    className="signup-inp"
+                                    type="text"
+                                    placeholder="Semester"
+                                    value={userDetails.semester}
+                                    name="semester"
+                                    onChange={handleChange}
+                                />
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    className="signup-inp"
+                                    type="text"
+                                    placeholder="Department"
+                                    value={userDetails.department}
+                                    name="department"
+                                    onChange={handleChange}
+                                    id="dept_tb"
+                                />
+                            </label>
+                            <br />
+                            <label>
+                                <input
+                                    className="signup-inp"
+                                    type="password"
+                                    placeholder="Password"
+                                    value={userDetails.password}
+                                    name="password"
+                                    onChange={handleChange}
+                                />
+                            </label>
+                            <button type="submit" id="signup_button">
+                                Submit
+                            </button>
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     );
