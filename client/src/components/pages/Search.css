@@ -1,0 +1,39 @@
+.search{
+    margin: 100px;
+}
+
+.search-card1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding: 20px;
+}
+
+.search-inp{
+    width: 30vw;
+    height: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: large;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.search-card2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    padding: 20px;
+    min-height: 47.6vh;
+}
+
+.body{
+    overflow:hidden ;
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,.9)),url('../../images/events5.jpg');
+    background-size: cover;
+}

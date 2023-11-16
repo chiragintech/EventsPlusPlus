@@ -14,7 +14,7 @@ function Home() {
         .then((result) => {
             let resData = result.data.reverse();
             setEvents(resData);
-            console.log(result.data);
+            // console.log(result.data);
         })
         .catch((err) => {
             console.log(err);
@@ -28,10 +28,11 @@ function Home() {
                 <h1 id="banner_desc">Plan Your Perfect Event With Event++</h1>
                 <p id="banner_span">It's all in the details</p>
             </div>
-            <h1 id="desc_header1">Popular</h1>
+            <h1 id="desc_header1">Latest</h1>
             <div className="event">
                 {events.map((event, i) => (
                     <Events
+                        display = {i>5?'none':'block'}
                         name = {event.task.eventName}
                         img={event.task.eventImgURL}
                         address={event.task.eventAddress}
