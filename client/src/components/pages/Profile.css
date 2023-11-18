@@ -1,0 +1,79 @@
+
+.details{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,.8)), url('../../images/events3.jpg');
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    text-align:center;
+    color: aliceblue;
+    text-shadow:0cm;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.details-container{
+    background-color: #bb141418;
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    width: 500px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.153);
+    margin: 20px;
+    
+}
+
+.basic-info{
+    position:relative;
+    border-radius: 8px;
+    top: 0px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.profile-pic{
+    position: relative;
+    border-radius: 8px;
+    top: -170px;
+    width: 800px;
+}
+
+
+.details-container2{
+    background-color: #bb141418;
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    
+    width: 500px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.153);
+}
+
+.basic-info p{
+    margin: 5px;
+    
+}
+
+.contact-info p{
+    margin: 5px;
+    
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+}
