@@ -12,6 +12,7 @@ function Create() {
         eventImgURL: "",
         eventDate: "",
         eventPrice: "",
+        eventType: "",
     });
 
     const handleChange = (e) => {
@@ -75,9 +76,15 @@ function Create() {
                     />
                 </div>
                 <div className="create-card2">
-                    {/* <h2>Location</h2> */}
+                    
+                    <select id="create-event-type" name="eventType" onChange={handleChange} value={task.eventType}>
+                        <option value="">--Select category--</option>
+                        <option value="music">Musical</option>
+                        <option value="technical">Technical</option>
+                        <option value="sports">Sports</option>
+                        <option value="health">Health</option>
+                    </select>
 
-                    {/* <label htmlFor="">About</label> */}
                     <input
                         className="create-inp"
                         type="text"
