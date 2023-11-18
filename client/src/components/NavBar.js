@@ -35,6 +35,7 @@ function NavBar() {
       <a href="/create">Create Event</a>
       <a href="/signup">Sign Up</a>
       <a href="/login">Login</a>
+      <a href="/profile">Profile</a>
     </div>
   );
 }

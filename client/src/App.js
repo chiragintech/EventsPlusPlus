@@ -8,6 +8,7 @@ import LogIn from "./components/pages/LogIn.js";
 import Create from "./components/pages/Create.js";
 import SignUp from "./components/pages/SignUp.js";
 import Search from "./components/pages/Search.js"
+import Profile from "./components/pages/Profile.js";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/create" element={<Create />} />
           <Route path="/search" element={ <Search/>} />
+          <Route path="/profile" element={ <Profile/>} />
+          
         </Routes>
       </Router>
     </div>
