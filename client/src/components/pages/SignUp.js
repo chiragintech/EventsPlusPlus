@@ -15,11 +15,23 @@ function SignUp() {
     })
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+        //event.preventDefault();
         // console.log('Form submitted:', { username, email, phoneNumber, srn, semester, department, password});
         console.log(userDetails);
+        setUserDetails([]);
     };
-
+    const handleEmpty = () => {
+        setUserDetails
+        ({
+            username: '',
+            email: '',
+            phoneNumber: '',
+            srn: '',
+            semester: '',
+            department: '',
+            password: ''
+        })
+    }
     const handleChange = (e) => {
         const { name, value } = e.target;
         setUserDetails((prev) => ({
@@ -115,13 +127,13 @@ function SignUp() {
                                     onChange={handleChange}
                                 />
                             </label>
-                            <button type="submit" id="signup_button">
+                            <button type="submit" id="signup_button" onClick={handleEmpty}>
                                 Submit
                             </button>
                             <br />
                             <br />
                         </div>
-                    </div>
+                    </div> 
                 </form>
             </div>
         </div>

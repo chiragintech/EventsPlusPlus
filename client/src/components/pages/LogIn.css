@@ -6,7 +6,10 @@
     display: flex;
     justify-content: center;
 }
+input:focus {
+    outline: none;
 
+}
 .login-welcome{
     display: flex;
     flex-direction: column;
@@ -62,8 +65,20 @@
     padding: 10px;
     border-radius: 10px;
     font-size: medium;
+    cursor:pointer;
 }
+#login_button:active {
+  
+    transform: translateY(1px); /* Slight downward shift for a pressed effect */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+  }
 
 #signup_link{
     margin-left: 20px;
+    color:red;
+    text-decoration: underline;
+}
+#signup_link:hover{
+    text-decoration: underline;
+    font-weight:100;
 }

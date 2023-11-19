@@ -1,7 +1,10 @@
 *{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+input:focus {
+    outline: none;
 
+}
 .create{
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,.8)), url('../../images/events3.jpg');
     background-size: cover;

@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/test");
+mongoose.connect("mongodb+srv://chirag611:jajRuz-cibga7-cighyq@cluster1.9xg24hl.mongodb.net/?retryWrites=true&w=majority")
 
 app.get('/get', (req, res) => {
     eventModel.find()

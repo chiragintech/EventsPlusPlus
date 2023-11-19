@@ -1,5 +1,6 @@
 .search{
-    margin: 100px;
+    margin: 200px;
+    background-size: contain;
 }
 
 .search-card1{
@@ -33,7 +34,13 @@
 }
 
 .body{
-    overflow:hidden ;
-    background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,.9)),url('../../images/events5.jpg');
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,.9)),url('../../images/events5.jpg');
     background-size: cover;
+    overflow:hidden ;
 }

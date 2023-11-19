@@ -7,8 +7,8 @@ function LogIn() {
       <NavBar />
       <div className="login">
         <div className="login-welcome">
-          <h1>Welcome Back</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rem sapiente laborum maxime totam commodi, inventore aspernatur! Excepturi ex eveniet repellat animi porro asperiores, voluptate veniam, quaerat voluptas velit perspiciatis!</p>
+          <h1>Welcome Back!</h1>
+          
         </div>
         <div className="login-forms">
           <form>
